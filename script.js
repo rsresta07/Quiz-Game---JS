@@ -128,6 +128,7 @@ function loadQuestion() {
     let ansOptions = document.getElementById("options");
     ansOptions.innerHTML = ""; // Clear previous options
     quesData.options.forEach((option, index) => {
+        // loads the radio button and label with the option name
         ansOptions.innerHTML += `<label>
             <input type="radio" name="option" value="${index}">
             ${option}
