@@ -1,5 +1,5 @@
 const questions = {
-    easy: [
+    Easy: [
         {
             question: "What is the capital city of Nepal?",
             options: ["Pokhara", "Lalitpur", "Kathmandu", "Bhaktapur"],
@@ -27,7 +27,7 @@ const questions = {
             correct: 0,
         },
     ],
-    medium: [
+    Medium: [
         {
             question:
                 'Who is known as the "Light of Asia" and was born in Lumbini, Nepal?',
@@ -55,7 +55,7 @@ const questions = {
             correct: 2,
         },
     ],
-    hard: [
+    Hard: [
         {
             question: "What is the height of Mount Everest?",
             options: [
@@ -115,6 +115,7 @@ function beginQuiz(difficulty) {
 
     document.getElementById("select-difficulty").style.display = "none";
     document.getElementById("interface").style.display = "block";
+    document.getElementById("current-level").innerText = difficulty;
     loadQuestion();
 }
 

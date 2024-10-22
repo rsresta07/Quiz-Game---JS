@@ -11,12 +11,14 @@
             <h1>The Quiz Game</h1>
             <div id="select-difficulty">
                 <label class="diff">Select Difficulty:</label>
-                <button onclick="beginQuiz('easy')">Easy</button>
-                <button onclick="beginQuiz('medium')">Medium</button>
-                <button onclick="beginQuiz('hard')">Hard</button>
+                <button onclick="beginQuiz('Easy')">Easy</button>
+                <button onclick="beginQuiz('Medium')">Medium</button>
+                <button onclick="beginQuiz('Hard')">Hard</button>
             </div>
 
             <div id="interface" style="display: none">
+                <label>Current Level: </label>
+                <label id="current-level"></label>
                 <h2 id="ques-num"></h2>
                 <p id="ques"></p>
                 <div id="options"></div>
