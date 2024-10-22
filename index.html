@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz Game JavaScript</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="quiz-container">
+            <h1>Quiz Game</h1>
+            <div id="select-difficulty">
+                <label class="diff">Select Difficulty:</label>
+                <button onclick="beginQuiz('easy')">Easy</button>
+                <button onclick="beginQuiz('medium')">Medium</button>
+                <button onclick="beginQuiz('hard')">Hard</button>
+            </div>
+
+            <div id="interface" style="display: none">
+                <h2 id="ques-num"></h2>
+                <p id="ques"></p>
+                <div id="options"></div>
+                <center>
+                    <button id="submit" onclick="submitAns()">Submit</button>
+                </center>
+                <p id="result"></p>
+            </div>
+
+            <div id="quiz-end" style="display: none">
+                <h2>Quiz Completed</h2>
+                <p id="final-score"></p>
+                <button onclick="restartQuiz()">Restart Quiz</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
