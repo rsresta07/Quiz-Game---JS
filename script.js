@@ -128,14 +128,10 @@ function loadQuestion() {
     let ansOptions = document.getElementById("options");
     ansOptions.innerHTML = ""; // Clear previous options
     quesData.options.forEach((option, index) => {
-        let label = document.createElement("label");
-        let input = document.createElement("input");
-        input.type = "radio";
-        input.name = "option";
-        input.value = index;
-        label.appendChild(input);
-        label.append(option);
-        ansOptions.appendChild(label);
+        ansOptions.innerHTML += `<label>
+            <input type="radio" name="option" value="${index}">
+            ${option}
+        </label>`;
     });
     document.getElementById("result").innerText = "";
 }
@@ -152,7 +148,7 @@ function submitAns() {
 
     if (answerIndex === correctAnswer) {
         document.getElementById("result").innerText = "Correct!";
-        document.getElementById("result").style.color = "blue";
+        document.getElementById("result").style.color = "green";
         score++;
     } else {
         document.getElementById(
